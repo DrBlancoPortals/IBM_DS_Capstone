@@ -10,7 +10,8 @@ IBM Coursera data science certification.
     Notebook used to demonstrate the SpaceX API usage
     (i.e. how to extract data by means of an exisiting API)
 
-+ **Data Wrangling exercise.ipynb**
++ **Data Wrangling exercise.ipynb**  
+    Under construction
 
 + **EDS-sql-coursera_sqllite.ipynb**  
     Notebook that shows the usage of sqlite to pass SQL
