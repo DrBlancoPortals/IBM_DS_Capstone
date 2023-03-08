@@ -8,7 +8,7 @@ import plotly.express as px
 import numpy as np
 
 
-def render_component(app: Dash, df: DataFrame) -> dbc.Col:
+def render_component(app: Dash, df: DataFrame, template: str) -> dbc.Col:
 
     min_payload = df["Payload Mass (kg)"].min()
     max_payload = df["Payload Mass (kg)"].max()
@@ -50,6 +50,7 @@ def render_component(app: Dash, df: DataFrame) -> dbc.Col:
             y="Payload Mass (kg)",
             color="Launch Site",
             title="Correlation between Payload and Flight number",
+            template=template,
         )
 
     container = dbc.Col(

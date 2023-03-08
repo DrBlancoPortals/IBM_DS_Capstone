@@ -8,17 +8,17 @@ from .payload_to_orbit import render_component as render_2
 from .payload_orbit_by_launch import render_component as render_3
 
 
-def create_layout(app: Dash, dataframe: DataFrame):
+def create_layout(app: Dash, dataframe: DataFrame, template: str):
     title_div = html.Div(
         [
             html.H1("SpaceX Launch Records Dashboard"),
             html.Hr(),
         ]
     )
-    col0 = render_0(app, dataframe)
-    col1 = render_1(app, dataframe)
-    col2 = render_2(app, dataframe)
-    col3 = render_3(app, dataframe)
+    col0 = render_0(app, dataframe, template)
+    col1 = render_1(app, dataframe, template)
+    col2 = render_2(app, dataframe, template)
+    col3 = render_3(app, dataframe, template)
 
     row_pies = dbc.Row(children=[col0, col1])
     row_graphs = dbc.Row(children=[col2, col3])

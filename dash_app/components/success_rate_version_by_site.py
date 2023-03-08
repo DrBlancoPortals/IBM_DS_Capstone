@@ -7,7 +7,7 @@ import dash_bootstrap_components as dbc
 import plotly.express as px
 
 
-def render_component(app: Dash, df: DataFrame) -> dbc.Col:
+def render_component(app: Dash, df: DataFrame, template: str) -> dbc.Col:
 
     dropdown_options = [
         {"label": "All Sites", "value": "ALL"},
@@ -42,6 +42,7 @@ def render_component(app: Dash, df: DataFrame) -> dbc.Col:
                 names="Short version",
                 values="class",
                 title=f"Total Success Launches by booster version",
+                template=template,
             )
 
         # Not and else required, given that the return is hit previously
@@ -51,6 +52,7 @@ def render_component(app: Dash, df: DataFrame) -> dbc.Col:
             names="Short version",
             values="class",
             title=f"Successfull launches per version in {selected_launchSite}",
+            template=template,
         )
 
     container = dbc.Col(
